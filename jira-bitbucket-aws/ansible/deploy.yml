@@ -1,0 +1,14 @@
+- name: Deploy Jira on AWS
+  hosts: aws_instances
+  become: yes
+  tasks:
+    - name: Install Docker
+      ansible.builtin.package:
+        name: docker
+        state: present
+    - name: Start Jira Container
+      community.docker.docker_container:
+        name: jira
+        image: atlassian/jira-software:latest
+        ports:
+          - "8080:8080"
