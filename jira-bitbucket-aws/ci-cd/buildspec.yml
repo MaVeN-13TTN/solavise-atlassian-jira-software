@@ -1,0 +1,11 @@
+version: 0.2
+
+phases:
+  build:
+    commands:
+      - echo "Building Docker images..."
+      - docker-compose -f ../docker/docker-compose.yml build
+  post_build:
+    commands:
+      - echo "Pushing Docker images to ECR..."
+      - docker-compose -f ../docker/docker-compose.yml push
