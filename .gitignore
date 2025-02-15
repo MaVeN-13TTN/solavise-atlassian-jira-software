@@ -1,0 +1,57 @@
+# Ignore Terraform variables file
+terraform.tfvars
+
+# Ignore Docker environment variables
+.env
+
+# Ignore .terraform directory
+.terraform
+
+# Local .terraform directories
+**/.terraform/*
+
+# Terraform state files
+*.tfstate
+*.tfstate.*
+*.tfstate.backup
+
+# Terraform variables files that might contain sensitive data
+*.tfvars
+*.tfvars.json
+
+# Crash log files
+crash.log
+crash.*.log
+
+# Exclude CLI configuration files
+.terraformrc
+terraform.rc
+
+# Exclude override files
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# Exclude provider lock file
+.terraform.lock.hcl
+
+# Log files
+*.log
+
+# System Files
+.DS_Store
+Thumbs.db
+
+# IDE specific files
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Ignore any local environment files
+.env
+.env.*
+
+# Ignore any generated plan files
+*tfplan*
